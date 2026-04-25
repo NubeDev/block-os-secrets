@@ -12,6 +12,7 @@
 /// - `blockd.owner`     — bearer for the local blockd loopback API (scope: machine id)
 /// - `cloud.cert_pin`   — SHA-256 pin of the cloud API TLS cert (scope: host)
 /// - `studio.handshake` — Tauri-shell ↔ agent loopback bearer (scope: install id)
+/// - `provision.token` — Zitadel post-login Action bearer (scope: `default`)
 #[derive(Clone, Debug, PartialEq, Eq, Hash)]
 pub struct SecretKey {
     /// Stable namespace, e.g. `"oidc.refresh"`. Lowercase, dot-separated.
