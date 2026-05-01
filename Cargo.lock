@@ -164,36 +164,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "block-os-secrets"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "async-trait",
- "thiserror",
- "zeroize",
-]
-
-[[package]]
-name = "block-os-secrets-keyring"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "async-trait",
- "block-os-secrets",
- "keyring",
- "tokio",
-]
-
-[[package]]
-name = "block-os-secrets-memory"
-version = "0.1.0"
-dependencies = [
- "async-trait",
- "block-os-secrets",
- "tokio",
-]
-
-[[package]]
 name = "block-padding"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -898,6 +868,36 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
 dependencies = [
  "getrandom 0.2.17",
+]
+
+[[package]]
+name = "rubix-secrets"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "thiserror",
+ "zeroize",
+]
+
+[[package]]
+name = "rubix-secrets-keyring"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "keyring",
+ "rubix-secrets",
+ "tokio",
+]
+
+[[package]]
+name = "rubix-secrets-memory"
+version = "0.1.0"
+dependencies = [
+ "async-trait",
+ "rubix-secrets",
+ "tokio",
 ]
 
 [[package]]
